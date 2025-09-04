@@ -17,7 +17,7 @@ You should now have an icon on your homescreen that looks like the iOS Notes app
 
 Once the files are uploaded and you can verify the page works, open **MysterSmith** and navigate to **Settings** > **Web-Polling**. Click **configure** next to **WEB data sources**, scroll to the bottom and add a custom data source. Add the full URL from above (e.g. https://www.mywebsite.com/notesmith/index.php), tick both **Enable anti-cache** and **JSON format**, and type **noteData** into the **Display field(s)** box. Then click **Save and close**. Back in the **Web-Polling** section, untick **Show received data on top**.
 
-In you want the peek to go to your Apple Watch, go in to "External Displays" and tick "use Apple Watch" and set "Apple watch display" to "enable".
+In you want the peek to go to your Apple Watch, go in to **External Displays** and tick **use Apple Watch** and set **Apple watch display** to **enable**.
 
 That's it. Anything typed on the fake Notes page will now be sent to your PeekSmith and/or Apple Watch.
 
