@@ -1,0 +1,105 @@
+:root {
+  --bg: #fff;
+  --pad: 1rem;
+  --icon-height: 4.5rem;
+  --top-offset: env(safe-area-inset-top, 0px);
+  --left-offset: env(safe-area-inset-left, 0px);
+  --right-offset: env(safe-area-inset-right, 0px);
+  --bottom-offset: env(safe-area-inset-bottom, 0px);
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: linear-gradient(to bottom, #fafafa 0%, #ffffff 33%, #ffffff 100%);
+  background-attachment: fixed;
+}
+
+body.notes-app {
+  margin: 0;
+  height: 100dvh;
+  width: 100vw;
+  font: 16px -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: #222;
+}
+
+.corner {
+  position: fixed;
+  top: var(--top-offset);
+  z-index: 10;
+}
+
+.corner.left {
+  left: var(--left-offset);
+}
+
+.corner.right {
+  right: var(--right-offset);
+}
+
+.corner img {
+  height: var(--icon-height);
+  width: auto;
+  display: block;
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+.editor-wrap {
+  min-height: 100dvh;
+  padding: calc(var(--top-offset) + var(--icon-height) + var(--pad)) var(--right-offset) var(--bottom-offset) var(--left-offset);
+  box-sizing: border-box;
+}
+
+.note-body {
+  outline: none;
+  border: none;
+  background: transparent;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.55;
+  white-space: pre-wrap;
+  word-break: break-word;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.note-body:empty:before {
+  content: attr(data-placeholder);
+  color: #9aa0a6;
+  pointer-events: none;
+}
+
+/* small helper for status/link row (optional) */
+.nm-row {
+  margin: .75rem 1rem 0 1rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+  color: #555;
+  font-size: .95rem;
+}
+.nm-row a { color: inherit; text-decoration: none; border-bottom: 1px dotted currentColor; }
+.nm-row a:hover { border-bottom-style: solid; }
+
+/* smooth theme change (9) */
+body, .note-body { transition: background-color .2s ease, color .2s ease; }
+
+/* make the top-right image look interactive */
+.corner.right img { cursor: pointer; }
+
+/* simulated dark mode */
+body.dark {
+  background: #000 !important;
+  color: #eee;
+}
+body.dark .note-body { color: #eee; }
+body.dark .note-body:empty:before { color: #8a8f98; }

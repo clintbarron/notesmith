@@ -1,0 +1,5 @@
+Options -Indexes
+<FilesMatch "\.json$">
+  Require all granted
+  Header set Content-Type "application/json; charset=utf-8"
+</FilesMatch>
