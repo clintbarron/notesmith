@@ -15,13 +15,15 @@ You should now have an icon on your homescreen that looks like the iOS Notes app
 
 ## MYSTERSMITH
 
-Once the files are uploaded and you can verify the page works, open **MysterSmith** and navigate to **Settings** > **Web-Polling**. Click **configure** next to **WEB data sources**, scroll to the bottom and add a custom data source. Add the full URL from above (e.g. https://www.mywebsite.com/notesmith/index.php), tick both **Enable anti-cache** and **JSON format**, and type **noteData** into the **Display field(s)** box. Then click **Save and close**. Back in the **Web-Polling** section, untick **Show received data on top**.
+Open **MysterSmith** and navigate to **Settings** > **WEB-POLLING**. Click **Configure** next to **WEB data sources**, scroll to the bottom to the **CUSTOM data sources** section and add a custom data source. Add the full URL from above (e.g. https://www.mywebsite.com/notesmith/index.php), tick both **Enable anti-cache** and **JSON format**, and type **noteData** into the **Display field(s)** box. Then click **Save and close**. Back in the **WEB-POLLING** section, untick **Show received data on top**.
 
-In you want the peek to go to your Apple Watch, go in to **External Displays** and tick **use Apple Watch** and set **Apple watch display** to **enable**.
+In you want the peek to go to your Apple Watch, go in to **EXTERNAL DISPLAY** in the main settings page and tick **Use Apple Watch** and set **Apple watch display** to **enable**.
+
+When you're ready to perform, just go go the **Perform** page and tap on **WEB-POLLING**. Then open the fake Notes app.
 
 That's it. Anything typed on the fake Notes page will now be sent to your PeekSmith and/or Apple Watch.
 
-## INSTRUCTIONS
+## NOTES APP INSTRUCTIONS
 
 Tap the left arrow at the top-left of the page to clear anything and start again.
 
